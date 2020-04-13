@@ -9,6 +9,7 @@ You're a security contractor, and you've been contacted by a local archival serv
 3. After they have entered their command, a message will print out confirming they're checked in: `  jsmith is checked in`.
 4. When they're done and want to leave the building, they enter their username followed by "out": `jsmith out`.
 5. After they have entered their command, a message will print out confirming they're checked out: `  jsmith is checked out`.
+6. If any suspicious conditions are encountered (see [requirements](#requirements)), you will sounded the alarm: `  ALARM SOUNDED`.
 
 For example interactions, see below.
 
@@ -57,12 +58,12 @@ The above scenario shows how the program would run. It would continue running fo
 - `zzdawg` checked in once just fine, but then tried to check in again, sounding the alarm.
 - An unauthorized user `elonmusk` tried to check in, so we sounded the alarm.
 - `enterocc` tried to check out, but was never checked in to begin with, so we sounded the alarm.
-- The final input was gibberish, so we sounded the alarm.
+- The second-to-last input was gibberish, so we sounded the alarm.
 
 ## Notes and Hints
 - This problem is a little harder than everything you've done so far. But don't overthink this.
 - Everything required to solve this problem is something you have either done before, or we've gone over it in a video. Mix and match these concepts.
-- Notice how the output is indented in 2 spaces.
+- Notice how the output is indented 2 spaces in. The tests will look for that, so pay attention.
 
 ## Knowledge Tested
 - Conditionals
