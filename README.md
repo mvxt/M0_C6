@@ -5,11 +5,11 @@ Repository with prompt and code for Module 1, Challenge 6: Security System (Begi
 You're a security contractor, and you've been contacted by a local archival service to create a simple program that tracks the entry and exit of personnel into a building. Here's how personnel would interact with your program:
 
 1. It will always display a prompt: `Input: `.
-2. A user will check in to the building by entering their username followed by "in": `jsmith in`.
-3. After they have entered their command, a message will print out confirming they're checked in: `  jsmith is checked in`.
-4. When they're done and want to leave the building, they enter their username followed by "out": `jsmith out`.
-5. After they have entered their command, a message will print out confirming they're checked out: `  jsmith is checked out`.
-6. If any suspicious conditions are encountered (see [requirements](#requirements)), you will sounded the alarm: `  ALARM SOUNDED`.
+2. A user will check in to the building by entering their username followed by "in": `Input: jsmith in`.
+3. After they have entered their command, a message will print out confirming they're checked in: `jsmith is checked in`.
+4. When they're done and want to leave the building, they enter their username followed by "out": `Input: jsmith out`.
+5. After they have entered their command, a message will print out confirming they're checked out: `jsmith is checked out`.
+6. If any suspicious conditions are encountered (see [requirements](#requirements)), you will sounded the alarm: `ALARM SOUNDED`.
 
 For example interactions, see below.
 
