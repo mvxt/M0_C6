@@ -53,7 +53,7 @@ class TestSecuritySystem(unittest.TestCase):
         """Tests logging out multiple times"""
         tests = [
             ('jjabrams in', '  jjabrams is checked in\r\n'),
-            ('jjabrams out', '  jjabrams is checked out\r\n')
+            ('jjabrams out', '  jjabrams is checked out\r\n'),
             ('jjabrams out', '  ALARM SOUNDED\r\n')
         ]
         self.assert_interactions(tests)
