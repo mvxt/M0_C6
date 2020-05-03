@@ -34,7 +34,10 @@ class TestSecuritySystem(unittest.TestCase):
     def test_bad_user(self):
         """Tests logging in w/ a bad username"""
         tests = [
-            ('elonmusk in', '  ALARM SOUNDED\r\n')
+            ('elonmusk in', '  ALARM SOUNDED\r\n'),
+            ('martycagan in', '  ALARM SOUNDED\r\n'),
+            ('joelspolsky in', '  ALARM SOUNDED\r\n'),
+            ('linuxtorvalds in', '  ALARM SOUNDED\r\n')
         ]
         self.assert_interactions(tests)
 
@@ -55,13 +58,24 @@ class TestSecuritySystem(unittest.TestCase):
         ]
         self.assert_interactions(tests)
 
-    def test_multi_logout(self):
+    def test_misc_gibberish(self):
         """Tests various gibberish commands"""
         tests = [
             ('blah blah hubba bubba', '  ALARM SOUNDED\r\n'),
             ('in in out', '  ALARM SOUNDED\r\n'),
             ('exit', '  ALARM SOUNDED\r\n'),
             ('abcdeja:LKEP#U (*Q Oo:UIO@:UFJIOF)(!*', '  ALARM SOUNDED\r\n')
+        ]
+        self.assert_interactions(tests)
+
+    def test_good_user_bad_action(self):
+        """Tests valid usernames but gibberish commands"""
+        tests = [
+            ('jjabrams hubba', '  ALARM SOUNDED\r\n'),
+            ('mhenderson blahsdf', '  ALARM SOUNDED\r\n'),
+            ('sbrown hello', '  ALARM SOUNDED\r\n'),
+            ('enterocc supercalifragilisticexpialidocious', '  ALARM SOUNDED\r\n'),
+            ('zzdawg awesome', '  ALARM SOUNDED\r\n')
         ]
         self.assert_interactions(tests)
 
