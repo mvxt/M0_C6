@@ -20,5 +20,4 @@ jobs:
     - run: pipenv install
     - name: Run Unit Tests in virtual env
       run: |
-        pipenv shell
-        python3 -m unittest discover .
+        pipenv run -m unittest discover .
